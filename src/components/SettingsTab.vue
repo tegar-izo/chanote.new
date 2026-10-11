@@ -1,4 +1,6 @@
 <script setup>
+import importIcon from '@/assets/import.svg'
+import exportIcon from '@/assets/export.svg'
 const exportData = () => {
   const savedData = localStorage.getItem('journal_entries')
 
@@ -54,7 +56,7 @@ const importData = () => {
 
 const resetData = () => {
   const isConfirmed = confirm(
-    'Apakah kamu yakin? Semua data jurnal akan terhapus dan TIDAK BISA KEMBALI (Yabai!).',
+    'Apakah kamu yakin? Semua data jurnal akan terhapus dan TIDAK BISA KEMBALI',
   )
 
   if (isConfirmed) {
@@ -70,8 +72,12 @@ const resetData = () => {
 
     <div class="settings-card">
       <h3>Data Management</h3>
-      <button id="btn-export" @click="exportData">Export Data (JSON)</button>
-      <button id="btn-import" @click="importData">Import Data (JSON)</button>
+      <button id="btn-export btn" @click="exportData">
+        <exportIcon class="icon-style" /> export (JSON)
+      </button>
+      <button id="btn-import btn" @click="importData">
+        <importIcon class="icon-style" /> import (JSON)
+      </button>
     </div>
 
     <div class="settings-card">
@@ -120,10 +126,15 @@ const resetData = () => {
   background: lightgreen;
   color: green;
   border: 1px solid green;
-  transition: background 0.2s;
+  transition: all 0.25s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
 }
 .settings-card button:hover {
-  background: #a9dfa9;
+  background: green;
+  color: lightgreen;
 }
 button.btn-danger {
   background: #ffb4ab;
@@ -131,6 +142,8 @@ button.btn-danger {
   border: 1px solid #690005;
 }
 button.btn-danger:hover {
-  background: #ff9d92;
+  background: #690005;
+  color: #ffb4ab;
+  border-color: #ffb4ab;
 }
 </style>

@@ -3,10 +3,10 @@ import { reactive, onMounted } from 'vue'
 
 const getTodayDate = () => {
   const now = new Date()
-  const year = now.getFullYear()
-  const month = String(now.getMonth() + 1).padStart(2, '0')
   const day = String(now.getDate()).padStart(2, '0')
-  return `${year}-${month}-${day}`
+  const month = now.toLocaleString('id-ID', { month: 'long' })
+  const year = now.getFullYear()
+  return `${day}-${month}-${year}`
 }
 
 const todayNote = reactive({
@@ -41,13 +41,14 @@ const simpanJurnal = () => {
 
   localStorage.setItem('journal_entries', JSON.stringify(allJournals))
 
-  alert('jurnal berhasil disimpan! selamat ya! 🎔 ')
+  alert('Jurnal berhasil disimpan! Sugoi!')
 }
 </script>
 
 <template>
   <div class="home-container container">
     <h1>Jurnal Hari Ini</h1>
+    <h2>{{ getTodayDate() }}</h2>
     <form @submit.prevent="simpanJurnal">
       <div class="mood-field">
         <button
@@ -103,7 +104,8 @@ form {
   flex: 1;
   font-size: 1rem;
   font-weight: bold;
-  border: 1px solid green;
+  border: 0px solid green;
+  box-shadow: 0 0 30px 2px #00800030;
   background: white;
   transition: all 0.25s ease-in-out;
   color: green;
@@ -122,9 +124,9 @@ form {
 #today-text-input {
   background: whitesmoke;
   border-radius: 16px;
-  border: 1px solid green;
+  border: none;
   color: green;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 30px 2px #00800030;
   resize: none;
   flex: 1;
   padding: 12px;

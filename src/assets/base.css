@@ -1,0 +1,28 @@
+:root {
+  /* === Colors === */
+  --color-primary: #2e7d32;
+  --color-primary-dark: #003100;
+  --color-primary-light: #ccffcc;
+  --color-text: #444;
+  --color-surface: #ffffff;
+  --color-surface-alt: whitesmoke;
+  --color-border: rgba(0, 0, 0, 0.25);
+
+  /* === Mood === */
+  --color-mood-sedih-bg: #ffcccc;
+  --color-mood-sedih-fg: #cc0000;
+  --color-mood-biasa-bg: #e0e0e0;
+  --color-mood-biasa-fg: #333;
+
+  /* === Danger === */
+  --color-danger-bg: #ffb4ab;
+  --color-danger-fg: #690005;
+
+  /* === Radius === */
+  --radius-sm: 16px;
+  --radius-lg: 30px;
+  --radius-pill: 99px;
+
+  /* === Shadow === */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

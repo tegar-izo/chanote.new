@@ -90,61 +90,67 @@ const simpanJurnal = () => {
 form {
   flex: 1;
   display: flex;
-
   flex-direction: column;
   gap: 12px;
 }
+
 .mood-field {
   display: flex;
   gap: 12px;
 }
+
 .mood-field .mood-selector {
-  border-radius: 12px;
-  padding: 8px 16px;
   flex: 1;
+  padding: 8px 16px;
   font-size: 1rem;
   font-weight: bold;
-  border: 0px solid green;
-  box-shadow: 0 0 30px 2px #00800030;
-  background: white;
+  color: var(--color-primary);
+  background: var(--color-surface);
+  border: none;
+  border-radius: var(--radius-sm);
+  box-shadow: 0 0 30px 2px rgba(46, 125, 50, 0.19);
+  cursor: pointer;
   transition: all 0.25s ease-in-out;
-  color: green;
 }
+
 .mood-field .mood-selector:hover {
-  border-radius: 99px;
+  border-radius: var(--radius-pill);
 }
 
 .mood-selector.active {
-  border-radius: 99px;
-  background: green;
-  border: 1px solid green;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  color: white;
+  color: var(--color-surface);
+  background: var(--color-primary);
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow-sm);
 }
+
 #today-text-input {
-  background: whitesmoke;
-  border-radius: 16px;
-  border: none;
-  color: green;
-  box-shadow: 0 0 30px 2px #00800030;
-  resize: none;
   flex: 1;
   padding: 12px;
+  color: var(--color-primary);
+  background: var(--color-surface-alt);
+  border: none;
+  border-radius: var(--radius-sm);
+  box-shadow: 0 0 30px 2px rgba(46, 125, 50, 0.19);
+  resize: none;
   outline: none;
 }
+
 .submit {
   padding: 12px 24px;
-  border: none;
   font-size: 1rem;
-  background: green;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border-radius: 99px;
   font-weight: bold;
-  color: white;
+  color: var(--color-surface);
+  background: var(--color-primary);
+  border: none;
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
   transition: all 0.25s ease-in-out;
 }
+
 .submit:hover {
-  background: rgb(0, 81, 0);
-  color: lightgreen;
+  color: var(--color-primary-light);
+  background: var(--color-primary-dark);
 }
 </style>

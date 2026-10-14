@@ -89,61 +89,77 @@ const resetData = () => {
 </template>
 
 <style scoped>
-/* CSS tetap sama seperti milikmu */
+/* =============================
+   CONTAINER
+   ============================= */
 .settings-container {
-  padding: 12px;
   display: flex;
   flex-direction: column;
   gap: 12px;
-  padding-bottom: 80px; /* Ruang untuk navbar */
+  padding: 12px;
+  padding-bottom: 80px; /* ruang untuk navbar */
 }
+
+/* =============================
+   CARD
+   ============================= */
 .settings-card {
-  background: white;
-  padding: 12px;
-  border-radius: 16px;
   display: flex;
   flex-direction: column;
   gap: 12px;
-}
-.settings-card h3 {
-  padding: 6px;
-  color: green;
-  font-size: 1.3rem;
-  border-bottom: 1px solid;
-  margin: 0;
-}
-.settings-card p {
-  padding: 0 6px;
-  margin: 0;
-  color: #444;
-}
-.settings-card button {
-  cursor: pointer;
   padding: 12px;
-  border-radius: 99px;
-  font-size: 1rem;
-  font-weight: bold;
-  background: lightgreen;
-  color: green;
-  border: 1px solid green;
-  transition: all 0.25s ease-in-out;
+  background: var(--color-surface);
+  border-radius: var(--radius-sm);
+}
+
+.settings-card h3 {
+  margin: 0;
+  padding: 6px;
+  color: var(--color-primary);
+  font-size: 1.3rem;
+  border-bottom: 1px solid var(--color-primary);
+}
+
+.settings-card p {
+  margin: 0;
+  padding: 0 6px;
+  color: var(--color-text);
+}
+
+/* =============================
+   BUTTON (default = primary)
+   ============================= */
+.settings-card button {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 6px;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--color-primary);
+  background: var(--color-primary-light);
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
 }
 .settings-card button:hover {
-  background: green;
-  color: lightgreen;
+  color: var(--color-primary-light);
+  background: var(--color-primary);
 }
+
+/* =============================
+   BUTTON DANGER
+   ============================= */
 button.btn-danger {
-  background: #ffb4ab;
-  color: #690005;
-  border: 1px solid #690005;
+  color: var(--color-danger-fg);
+  background: var(--color-danger-bg);
+  border: 1px solid var(--color-danger-fg);
 }
 button.btn-danger:hover {
-  background: #690005;
-  color: #ffb4ab;
-  border-color: #ffb4ab;
+  color: var(--color-danger-bg);
+  background: var(--color-danger-fg);
+  border-color: var(--color-danger-bg);
 }
 </style>

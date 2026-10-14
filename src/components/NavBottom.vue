@@ -39,44 +39,59 @@ const emit = defineEmits(['changeTab'])
 </template>
 
 <style scoped>
+/* =============================
+   NAVBAR
+   ============================= */
 .navbar {
-  background: lightgreen;
   display: flex;
   position: sticky;
   width: fit-content;
   margin-bottom: 24px;
-  /* gap: 6px; */
   padding: 6px;
-  border-radius: 99px;
-  border: 1px solid #00000030;
+  background: var(--color-primary-light);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
+/* =============================
+   NAVBAR ITEM
+   ============================= */
 .navbar .navbar-item {
-  width: 100px;
-  flex: 1;
-  text-align: center;
-  border: none;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 3px;
-  cursor: pointer;
-  border-radius: 99px;
-  background: transparent;
+  width: 100px;
+  flex: 1;
   padding: 6px 12px;
-  color: green;
-  opacity: 0.6;
   font-weight: bold;
+  text-align: center;
+  color: var(--color-primary);
+  background: transparent;
+  border: none;
+  border-radius: var(--radius-pill);
+  opacity: 0.6;
+  cursor: pointer;
   transition: all 0.25s ease-in-out;
 }
 
+/* =============================
+   ACTIVE STATE
+   ============================= */
 .navbar-item.active {
+  color: var(--color-surface);
+  background: var(--color-primary);
   opacity: 1;
-  background: green;
-  color: #ffffffd0;
+  box-shadow: var(--shadow-sm);
+}
 
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+/* =============================
+   ICON
+   ============================= */
+.icon-style {
+  width: 20px;
+  height: 20px;
 }
 </style>

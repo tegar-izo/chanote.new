@@ -1,0 +1,108 @@
+<svg id="journal-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-full h-full relative shadow-2xl rounded-[112px] transition-transform duration-300 hover:scale-[1.02]">
+                <defs>
+                    <!-- Background Soft Gradient -->
+                    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#E8F5E9"/>
+                        <stop offset="50%" stop-color="#C8E6C9"/>
+                        <stop offset="100%" stop-color="#A5D6A7"/>
+                    </linearGradient>
+
+                    <!-- Journal Cover Gradient -->
+                    <linearGradient id="coverGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#81C784"/>
+                        <stop offset="100%" stop-color="#4CAF50"/>
+                    </linearGradient>
+
+                    <!-- Page Gradient -->
+                    <linearGradient id="pageGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" stop-color="#FFFFFF"/>
+                        <stop offset="100%" stop-color="#F4F8F5"/>
+                    </linearGradient>
+
+                    <!-- Pen Body Gradient -->
+                    <linearGradient id="penGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#A5D6A7"/>
+                        <stop offset="100%" stop-color="#66BB6A"/>
+                    </linearGradient>
+
+                    <!-- Soft Shadow Filter -->
+                    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+                        <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#2E7D32" flood-opacity="0.18"/>
+                    </filter>
+                    
+                    <filter id="penShadow" x="-20%" y="-20%" width="140%" height="140%">
+                        <feDropShadow dx="4" dy="8" stdDeviation="6" flood-color="#1B5E20" flood-opacity="0.2"/>
+                    </filter>
+                </defs>
+
+                <!-- Icon Base Shape (Squircle / Rounded Square) -->
+                <rect width="512" height="512" rx="112" fill="url(#bgGradient)"/>
+
+                <!-- Decorative Background Circles (Subtle Accent) -->
+                <circle cx="410" cy="100" r="140" fill="#FFFFFF" fill-opacity="0.25"/>
+                <circle cx="90" cy="420" r="100" fill="#81C784" fill-opacity="0.2"/>
+
+                <!-- Main Journal Group with Shadow -->
+                <g filter="url(#softShadow)">
+                    <!-- Journal Outer Back Cover Shadow/Depth -->
+                    <path d="M 120,132 C 120,120 130,110 142,110 L 370,110 C 382,110 392,120 392,132 L 392,388 C 392,400 382,410 370,410 L 142,410 C 130,410 120,400 120,388 Z" fill="#388E3C" opacity="0.3"/>
+
+                    <!-- Left Page Stack Shadow (Depth effect) -->
+                    <path d="M 124,136 L 256,144 L 256,396 L 124,388 Z" fill="#C8E6C9"/>
+                    <!-- Right Page Stack Shadow -->
+                    <path d="M 388,136 L 256,144 L 256,396 L 388,388 Z" fill="#A5D6A7"/>
+
+                    <!-- Main Open Pages Body -->
+                    <!-- Left Page -->
+                    <path d="M 128,130 C 180,136 220,140 256,142 L 256,392 C 216,390 170,384 128,380 C 128,380 128,130 128,130 Z" fill="url(#pageGradient)"/>
+                    
+                    <!-- Right Page -->
+                    <path d="M 384,130 C 332,136 292,140 256,142 L 256,392 C 296,390 342,384 384,380 C 384,380 384,130 384,130 Z" fill="url(#pageGradient)"/>
+
+                    <!-- Spine / Center Shadow -->
+                    <path d="M 252,142 Q 256,140 260,142 L 260,392 Q 256,390 252,392 Z" fill="#81C784" opacity="0.5"/>
+
+                    <!-- Left Page Minimal Text Lines -->
+                    <line x1="156" y1="180" x2="228" y2="184" stroke="#A5D6A7" stroke-width="5" stroke-linecap="round"/>
+                    <line x1="156" y1="208" x2="236" y2="212" stroke="#C8E6C9" stroke-width="5" stroke-linecap="round"/>
+                    <line x1="156" y1="236" x2="210" y2="240" stroke="#C8E6C9" stroke-width="5" stroke-linecap="round"/>
+
+                    <!-- Right Page Minimal Text Lines -->
+                    <line x1="276" y1="184" x2="356" y2="180" stroke="#A5D6A7" stroke-width="5" stroke-linecap="round"/>
+                    <line x1="276" y1="212" x2="348" y2="208" stroke="#C8E6C9" stroke-width="5" stroke-linecap="round"/>
+                    <line x1="276" y1="240" x2="330" y2="236" stroke="#C8E6C9" stroke-width="5" stroke-linecap="round"/>
+
+                    <!-- Small Botanical Art Detail on Left Page -->
+                    <g transform="translate(170, 280) scale(0.7)" stroke="#66BB6A" stroke-width="3.5" stroke-linecap="round" fill="none">
+                        <path d="M 20,60 Q 25,30 35,10"/>
+                        <!-- Leaves -->
+                        <path d="M 32,18 C 42,12 45,22 32,28" fill="#A5D6A7"/>
+                        <path d="M 26,30 C 14,24 12,36 26,38" fill="#A5D6A7"/>
+                        <path d="M 29,42 C 40,38 40,50 29,48" fill="#A5D6A7"/>
+                    </g>
+
+                    <!-- Small Heart Icon on Right Page -->
+                    <path d="M 320,290 C 320,285 315,280 310,280 C 304,280 300,285 300,290 C 300,298 310,305 310,305 C 310,305 320,298 320,290 Z" fill="#81C784" opacity="0.8"/>
+                    
+                    <!-- Bookmark Ribbon Hanging Out -->
+                    <path d="M 256,392 Q 270,410 265,430 L 250,420 L 235,430 Q 242,410 256,392 Z" fill="#4CAF50"/>
+                </g>
+
+                <!-- Modern Stylized Pen resting on Journal -->
+                <g filter="url(#penShadow)">
+                    <g transform="translate(240, 110) rotate(28)">
+                        <!-- Pen Clip -->
+                        <rect x="10" y="24" width="6" height="40" rx="3" fill="#388E3C"/>
+                        <!-- Pen Body -->
+                        <rect x="0" y="0" width="22" height="180" rx="11" fill="url(#penGradient)"/>
+                        <!-- Pen Cap / Accent Line -->
+                        <rect x="0" y="50" width="22" height="6" fill="#2E7D32" opacity="0.3"/>
+                        <!-- Pen Grip Detail -->
+                        <rect x="0" y="130" width="22" height="30" fill="#81C784" opacity="0.5"/>
+                        <!-- Nib Base -->
+                        <path d="M 0,180 L 22,180 L 11,205 Z" fill="#388E3C"/>
+                        <!-- Nib Tip -->
+                        <path d="M 8,198 L 14,198 L 11,207 Z" fill="#1B5E20"/>
+                    </g>
+                </g>
+            </svg>
